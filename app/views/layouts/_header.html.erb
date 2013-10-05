@@ -9,7 +9,7 @@
       <li class="divider"></li>
       <li><%= link_to "Browse things", pins_path %></li>
       <li class="divider"></li>
-      <li><%= link_to "+Add a Thing" %></li>
+      <li><%= link_to "+Add a Thing", new_pin_path %></li>
       <li class="divider"></li>
       <% if user_signed_in? %>
       <li><%= link_to "Edit profile", edit_user_registration_path %></li>

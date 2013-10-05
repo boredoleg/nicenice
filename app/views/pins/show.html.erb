@@ -1,17 +1,17 @@
-<p id="notice"><%= notice %></p>
-
+<div class="row"]]>    
+  <div class="small-2 large-4 columns"]]>        
 <p>
-  <b>Product name:</b>
+  <b>What`s the thing?</b>
   <%= @pin.product_name %>
 </p>
 
 <p>
-  <b>Product description:</b>
+  <b>What´s the story?</b>
   <%= @pin.product_description %>
 </p>
 
 <p>
-  <b>Product price:</b>
+  <b>How much do you want for it?</b>
   <%= @pin.product_price %>
 </p>
 
@@ -24,7 +24,9 @@
   <b>Contact email:</b>
   <%= @pin.contact_email %>
 </p>
-
+</div>
+</div>
 
 <%= link_to 'Edit', edit_pin_path(@pin) %> |
 <%= link_to 'Back', pins_path %>
+

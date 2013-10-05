@@ -1,9 +1,11 @@
-
-<div class="row" id="welcome">
-  <div class="large-12 columns pull-left">
-  	<h1>Welcome</h1>
-  	<p>
-			<%= link_to "Post a nice thing", new_pin_path, class: "large button" %>
-		</p>
-  </div>
-</div>
+<% if user_signed_in? %>
+<% else %>
+	<div class="row" id="welcome">
+	  <div class="large-12 columns pull-left">
+	  	<h1>Welcome</h1>
+	  	<p>
+				<%= link_to "Post a nice thing", new_pin_path, class: "large button" %>
+			</p>
+	  </div>
+	</div>
+<% end %>
