@@ -1,16 +1,9 @@
 <%= simple_form_for(@pin, html: { class:"form-horizontal"}) do |f| %>
-  <% if @pin.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
+  <%= f.error_notification %>
+  <%= f.full_error :image_file_size, class: "alert alert-error" %>
+  <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
-      <ul>
-      <% @pin.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  <%= f.input :image, label: "Upload an image" %>
   <%= f.input :product_name, as: :text, label: "What`s the thing?", placeholder: "Make it teasing", input_html: { rows: "1"} %>
   <%= f.input :product_description, as: :text, label: "What´s the story?", placeholder: "Keep it short and funny. You got 300 characters", input_html: { rows: "3", :maxlength => 300} %>
   <%= f.input :product_price, as: :decimal, label: "How much do you want for it?", placeholder: "Enter the price in HKD", label: "Price", input_html: { rows: "1", step: "50.00"} %><form action="demo_form.asp">

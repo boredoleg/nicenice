@@ -11,12 +11,16 @@
       <li class="divider"></li>
       <li><%= link_to "+Add a Thing", new_pin_path %></li>
       <li class="divider"></li>
+
       <% if user_signed_in? %>
+
       <li><%= link_to "Edit profile", edit_user_registration_path %></li>
       <li class="divider"></li>
       <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       <li class="divider"></li>
+
       <% else %>
+      
       <li><%= link_to "LogIn", new_user_session_path %></li>
       <li class="divider"></li>
       <li><%= link_to "Sign Up", new_user_registration_path %></li>
