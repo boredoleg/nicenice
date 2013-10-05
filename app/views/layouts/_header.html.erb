@@ -1,0 +1,26 @@
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to "Awesome Store", pins_path %></a></h1>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+      <li><%= link_to "Browse things", pins_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "+Add a Thing" %></li>
+      <li class="divider"></li>
+      <% if user_signed_in? %>
+      <li><%= link_to "Edit profile", edit_user_registration_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <li class="divider"></li>
+      <% else %>
+      <li><%= link_to "LogIn", new_user_session_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
